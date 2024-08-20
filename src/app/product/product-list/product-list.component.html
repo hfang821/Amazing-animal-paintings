@@ -1,9 +1,9 @@
 <div class="container">
     
     <h2>Our latest collections</h2>
-    
+
     <div fxLayout = "row wrap" fxLayoutGap = "50px grid">
-        <div *ngFor="let product of products">
+        <div *ngFor="let product of products" (click)="addToCart(product)">
             <mat-card class="product-card" appearance="outlined">
                 <img mat-card-image src="assets/images/{{product.image_url}}">
                 <mat-card-content>
